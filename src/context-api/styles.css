@@ -1,0 +1,27 @@
+.main {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.sidebar-section {
+    width: 200px;
+    float: left;
+}
+
+.main-section {
+    width: 600px;
+    float: left;
+}
+
+.main::after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+
+.topbar {
+    background-color: blue;
+    text-align: right;
+    padding: 10px 6px;
+    color: white;
+}
