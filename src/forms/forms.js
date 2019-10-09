@@ -15,11 +15,12 @@ class Form extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
     }
 
+    // YOU CAN ALSO DO THIS
     // handleSubmit = () => { }
     handleFormSubmit(event) {
         event.preventDefault();
         this.setState({ isValid: true });
-        if (this.state.username.toLowerCase() === "tony" && this.state.password === "asd") {
+        if (this.state.username !== "" && this.state.password !== "") {
             this.setState({ isValid: true, isLoggedIn: true });
         } else {
             this.setState({ isValid: false, isLoggedIn: false });
@@ -28,6 +29,7 @@ class Form extends Component {
 
     handleInputChange(event) {
         const name = event.target.name;
+        // YOU CAN ALSO DO THIS
         // const partialState = {};
         // partialState[name] = event.target.value;
         // this.setState(partialState);

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import "./styles.css";
 
 const ProfileContext = React.createContext();
@@ -58,14 +58,11 @@ function Main(props) {
 }
 
 function TopBar(props) {
+    const context = useContext(ProfileContext);
     return (
-        <ProfileContext.Consumer>
-            {value => (
-                <div className="topbar">
-                    <span>{value.user.name}</span>
-                </div>
-            )}
-        </ProfileContext.Consumer>
+        <div className="topbar">
+            <span>{context.user.name}</span>
+        </div>
     );
 }
 
